@@ -8,6 +8,7 @@ package com.portfolioBE.portfolioBackEnd.service;
 import com.portfolioBE.portfolioBackEnd.model.Educacion;
 import com.portfolioBE.portfolioBackEnd.repository.EducacionRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +36,10 @@ public class EducacionService implements IEducacionService{
     @Override
     public Educacion buscarEducacion(Long id) {
         return educRepo.findById(id).orElse(null);
+    }
+    @Override
+    public Optional<Educacion> getOne(Long id){
+        return educRepo.findById(id);
     }
 
 }

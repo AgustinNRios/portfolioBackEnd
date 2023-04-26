@@ -7,6 +7,7 @@ package com.portfolioBE.portfolioBackEnd.service;
 
 import com.portfolioBE.portfolioBackEnd.model.Educacion;
 import java.util.List;
+import java.util.Optional;
 
 public interface IEducacionService {
     
@@ -17,5 +18,7 @@ public interface IEducacionService {
     public void borrarEducacion (Long id);
     
     public Educacion buscarEducacion(Long id);
+    
+    public Optional<Educacion> getOne(Long id);
     
 }
