@@ -11,14 +11,14 @@ import java.util.Optional;
 
 public interface IEducacionService {
     
-    public List<Educacion> verEducacion();
+    public List<Educacion> listEducacion();
     
-    public void crearEducacion (Educacion educ);
+    public void createEducacion (Educacion exp);
     
-    public void borrarEducacion (Long id);
+    public void deleteEducacion (Long id);
     
-    public Educacion buscarEducacion(Long id);
+    public Educacion findEducacion(Long id);
     
-    public Optional<Educacion> getOne(Long id);
+    public Optional<Educacion> getEducacion(Long id);
     
 }
