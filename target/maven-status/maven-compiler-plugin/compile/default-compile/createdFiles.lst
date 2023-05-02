@@ -3,6 +3,7 @@ com\portfolioBE\portfolioBackEnd\service\EducacionService.class
 com\portfolioBE\portfolioBackEnd\controller\EducacionController.class
 com\portfolioBE\portfolioBackEnd\repository\ExperienciaRepository.class
 com\portfolioBE\portfolioBackEnd\service\IExperienciaService.class
+com\portfolioBE\portfolioBackEnd\WebConfig.class
 com\portfolioBE\portfolioBackEnd\repository\AcercaDeMiRepository.class
 com\portfolioBE\portfolioBackEnd\repository\HardAndSoftSkillRepository.class
 com\portfolioBE\portfolioBackEnd\service\IAcercaDeMiService.class
