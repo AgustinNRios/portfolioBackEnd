@@ -24,7 +24,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("acercaDeMi")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://portauthar528folio.web.app")
 public class AcercaDeMiController {
     
     @Autowired
