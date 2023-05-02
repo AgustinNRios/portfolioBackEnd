@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("hardAndSoftSkill")
-@CrossOrigin(origins="https://portauthar528folio.web.app")
+/*@CrossOrigin(origins="https://portauthar528folio.web.app")*/
 public class HardAndSoftSkillController {
     
     @Autowired
