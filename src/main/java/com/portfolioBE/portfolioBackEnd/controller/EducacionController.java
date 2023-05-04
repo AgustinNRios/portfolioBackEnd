@@ -32,14 +32,12 @@ public class EducacionController {
     private IEducacionService educServ;
     
     @PostMapping("/new")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void addEducacion(@RequestBody Educacion educ)
     {
         educServ.createEducacion(educ);
     }
     
     @GetMapping("/lista")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     @ResponseBody
     public List<Educacion> listaEducacion()
     {
@@ -47,7 +45,6 @@ public class EducacionController {
     }
     
     @GetMapping("/get/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public Educacion getEducacionById(@PathVariable("id")long id){
         
         Educacion educacion = educServ.getEducacion(id).get();
@@ -55,14 +52,12 @@ public class EducacionController {
     }
         
     @DeleteMapping("/delete/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void deleteEducacion(@PathVariable Long id)
     {
         educServ.deleteEducacion(id);
     }
     
     @PutMapping("/update/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void updateEducacion(@PathVariable("id") long id,@RequestBody Educacion educ){
 
         Educacion educacion = educServ.findEducacion(id);

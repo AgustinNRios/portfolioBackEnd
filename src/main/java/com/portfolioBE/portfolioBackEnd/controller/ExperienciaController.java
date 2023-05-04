@@ -32,14 +32,12 @@ public class ExperienciaController {
     private IExperienciaService expServ;
     
     @PostMapping("/new")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void addExperiencia(@RequestBody Experiencia exp)
     {
         expServ.createExperiencia(exp);
     }
     
     @GetMapping("/lista")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     @ResponseBody
     public List<Experiencia> listaExperiencia()
     {
@@ -47,7 +45,6 @@ public class ExperienciaController {
     }
     
     @GetMapping("/get/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public Experiencia getExperienciaById(@PathVariable("id")long id){
         
         Experiencia experiencia = expServ.getExperiencia(id).get();
@@ -55,14 +52,12 @@ public class ExperienciaController {
     }
         
     @DeleteMapping("/delete/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void borrarExperiencia(@PathVariable Long id)
     {
         expServ.deleteExperiencia(id);
     }
     
     @PutMapping("/update/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void updateExperiencia(@PathVariable("id") long id,@RequestBody Experiencia exp){
 
         Experiencia experiencia = expServ.findExperiencia(id);

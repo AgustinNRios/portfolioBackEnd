@@ -31,14 +31,12 @@ public class AcercaDeMiController {
     private IAcercaDeMiService acercaDeMiService;
     
     @PostMapping("/new")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void addAcercaDeMi(@RequestBody AcercaDeMi aDM)
     {
         acercaDeMiService.createAcercaDeMi(aDM);
     }
     
     @GetMapping("/lista")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     @ResponseBody
     public List<AcercaDeMi> listaAcercaDeMi()
     {
@@ -46,7 +44,6 @@ public class AcercaDeMiController {
     }
     
     @GetMapping("/get/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public AcercaDeMi getAcercaDeMiById(@PathVariable("id")long id){
         
         AcercaDeMi aDM = acercaDeMiService.getAcercaDeMi(id).get();
@@ -54,14 +51,12 @@ public class AcercaDeMiController {
     }
         
     @DeleteMapping("/delete/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void deleteAcercaDeMi(@PathVariable Long id)
     {
         acercaDeMiService.deleteAcercaDeMi(id);
     }
     
     @PutMapping("/update/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void updateAcercaDeMi(@PathVariable("id") long id,@RequestBody AcercaDeMi aDM){
 
         AcercaDeMi aDMS = acercaDeMiService.findAcercaDeMi(id);

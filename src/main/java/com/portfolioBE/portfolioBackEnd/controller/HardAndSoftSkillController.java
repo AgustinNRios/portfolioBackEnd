@@ -32,14 +32,12 @@ public class HardAndSoftSkillController {
     private IHardAndSoftSkillService hASSService;
     
     @PostMapping("/new")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void addHardAndSoftSkill(@RequestBody HardAndSoftSkill hASS2)
     {
         hASSService.createHardAndSoftSkill(hASS2);
     }
     
     @GetMapping("/lista")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     @ResponseBody
     public List<HardAndSoftSkill> listaHardAndSoftSkill()
     {
@@ -47,7 +45,6 @@ public class HardAndSoftSkillController {
     }
     
     @GetMapping("/get/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public HardAndSoftSkill getHardAndSoftSkillById(@PathVariable("id")long id){
         
         HardAndSoftSkill hASS = hASSService.getHardAndSoftSkill(id).get();
@@ -55,14 +52,12 @@ public class HardAndSoftSkillController {
     }
         
     @DeleteMapping("/delete/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void deleteHardAndSoftSkill(@PathVariable Long id)
     {
         hASSService.deleteHardAndSoftSkill(id);
     }
     
     @PutMapping("/update/{id}")
-    @CrossOrigin(origins="https://portauthar528folio.web.app")
     public void updateHardAndSoftSkill(@PathVariable("id") long id,@RequestBody HardAndSoftSkill hASS2){
 
         HardAndSoftSkill hASS = hASSService.findHardAndSoftSkill(id);
