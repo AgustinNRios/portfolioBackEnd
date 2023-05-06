@@ -25,7 +25,7 @@ public class HardAndSoftSkill {
     private String img;
     private String area;
     private String nombre;
-    private String nivel;
+    private int nivel;
     private String categoria;
     
     //constructores
@@ -37,7 +37,7 @@ public class HardAndSoftSkill {
             String img,
             String area,
             String nombre,
-            String nivel,
+            int nivel,
             String categoria){
         
         this.id = id;
